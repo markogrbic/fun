@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Assa Abloy recruitment challenge</h1>
+
+<p>Go to <a href="https://www.abloy.com/global/fi/career/crack-the-code" target="_blank">https://www.abloy.com/global/fi/career/crack-the-code</a>.</p>
+<p>There you will find the following base64 encoded lines:
+  <ul>
+    <li>Z2lzdC5naXRodWIuY29tL3NvcmVhbEZJTi83YTA1ZTFmYjEwZDA2ODVjNGEzYjU3ZjgyNGQwNTQ4Ng==</li>
+    <li>==QZZQ9k2YY2UtGaaG10CZZCtl2YY2Jh3YY3IvXZZXJlXYYX9jSaaS9mCbbCJh2bb2ds2LL29t2YY2ku3bb3JsWYYWcu3dd393yLLyM6HccHR0HaaH</li>
+  </ul>
+</p>
+
+<p>The first base64 encoded line decodes to the following GitHub Gist URL: <a href="https://gist.github.com/sorealFIN/7a05e1fb10d0685c4a3b57f824d05486" target="_blank">https://gist.github.com/sorealFIN/7a05e1fb10d0685c4a3b57f824d05486</a></a></p>
+<p>The second one decodes to some gibberish.</p>
+<p>
+    The gist code is contained in a nut.js file which has tho functions - foo() and bar().
+    The foo function is implemented and it takes as input text and encodes it in base64 and appends some data to it.
+    The bar() function is empty. The basic idea is to implement and reverse the output of foo() in the bar() function and feed it the second encoded line.
+    Please see the nut.js for details.
+    After doing that we get the following URL which is the recruitment page of Assa Abloy <a href="https://www.abloy.com/global/fi/career/cracked-the-code" target="_blank">https://www.abloy.com/global/fi/career/cracked-the-code</a>.
+    The contents of both pages have been archived as pdfs in this repo.
+</p>
+
+<p id="display"></p>
+
+<script src="nut.js"></script>
+<script>
+    let input_text = '==QZZQ9k2YY2UtGaaG10CZZCtl2YY2Jh3YY3IvXZZXJlXYYX9jSaaS9mCbbCJh2bb2ds2LL29t2YY2ku3bb3JsWYYWcu3dd393yLLyM6HccHR0HaaH';
+    let output_bar = bar(input_text);
+    document.getElementById("display").innerHTML = "Input bar():<br>" + input_text + "<br>Output bar():<br>" + output_bar;
+</script>
+
+</body>
+</html>
